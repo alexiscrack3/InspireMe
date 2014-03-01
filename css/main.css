@@ -1,0 +1,12 @@
+body{background:#e8e8e8;color:#444;font-family:Arial;font-size:16px}
+header{background:#f00;height:4em;left:0;position:relative;top:0;}
+header #logo-area{background:#008000;height:100%;left:0;position:absolute;top:0;width:30%;}
+header #logo-area figure{background:#fff;border:1px dashed #000;height:35px;margin-right:10px;width:100px}
+header #menu-area{background:#00f;height:100%;position:absolute;right:0;top:0;width:70%;}
+header #menu-area nav ul{margin:0;padding:0;}
+header #menu-area nav ul li{float:left}
+header #menu-area nav ul a{background:#ffa500;display:block;padding:0 2em}
+.table{display:table}
+.cell{display:table-cell;vertical-align:middle}
+.left{float:left}
+.right{float:right}
