@@ -1,59 +1,83 @@
+dark-gray = #707070
+header-height = 4em
+light-gray = #fafafa
+light-gray2 = #dddcdc
+main-color = #444
+pastel-blue = #29abe2
+
 body
-    background #e8e8e8
-    color #444
+    background #f7f7f7
+    color main-color
     font-family Arial
-    font-size:16px
+    font-size 16px
+    margin 0 auto
+    width 75%
 
 header
-    background red
-    height 4em
+    background white
+    height header-height
     left 0
     position relative
     top 0
 
+    > *
+        position absolute
+        top 0
+
     #logo-area
-        background green
         height 100%
         left 0
-        position absolute
-        top 0
-        width 30%
+        width 20%
 
         figure
-            background white
+            background pastel-blue
             border 1px dashed black
-            height 35px
-            margin-right 10px
-            width 100px
+            border-radius 10px
+            height 3em
+            margin-left 10%
+            margin-top -1.5em
+            position absolute
+            top 50%
+            width 80%
 
-    #menu-area
-        background blue
+    nav
         height 100%
-        position absolute
+        line-height header-height
         right 0
-        top 0
-        width 70%
+        width 80%
 
-        nav
-            ul
-                margin 0
-                padding 0
+        ul
+            float right
+            margin 0
+            padding 0
 
-                li
-                    float left
+            li
+                float left
 
-                a
-                    background orange
-                    display block
-                    padding 0 2em
+            a
+                color main-color
+                display block
+                font-weight bold
+                padding 0 2em
+                text-decoration none
+                transition background-color 0.2s ease-in-out
 
-.table
-    display table
+                &:hover
+                    background pastel-blue
+                    color white
+#main-area
+    background white
+    border 1px solid #e0e0e0
+    height 500px
 
-.cell
-    display table-cell
-    vertical-align middle
+    > *
+        margin 0
+        padding 0
 
+footer
+    background pastel-blue
+    padding 1em
+    text-align center
 
 .left
     float left
