@@ -1,73 +1,82 @@
-dark-gray = #707070
 header-height = 4em
-light-gray = #fafafa
-light-gray2 = #dddcdc
-main-color = #444
-pastel-blue = #29abe2
+
+dark-gray    = #707070
+light-gray   = #FAFAFA
+light-gray2  = #DDDCDC
+
+main-black   = #444
+main-blue    = #29ABE2
 
 body
-    background #f7f7f7
-    color main-color
+    background #F7F7F7
+    color main-black
     font-family Arial
     font-size 16px
     margin 0 auto
     width 75%
 
 header
-    background white
     height header-height
     left 0
+    margin 0.67em 0
     position relative
     top 0
 
-    > *
-        position absolute
-        top 0
+    > div
+        height header-height
 
     #logo-area
-        height 100%
-        left 0
-        width 20%
+        line-height header-height
+        text-align center
+        width 25%
 
-        figure
-            background pastel-blue
-            border 1px dashed black
+        span
+            color main-blue
+            font-size 2em
+
+    #ads-area
+        text-align right /* This will only work if the child block is an inline-block */
+        width 75%
+
+        aside
+            background white
+            border 1px dashed main-black
             border-radius 10px
-            height 3em
-            margin-left 10%
-            margin-top -1.5em
-            position absolute
-            top 50%
+            box-sizing border-box
+            display inline-block
+            height header-height
             width 80%
 
-    nav
-        height 100%
-        line-height header-height
-        right 0
-        width 80%
+nav
+    background light-gray
+    height header-height
+    line-height header-height
+    right 0
+    width 100%
 
-        ul
-            float right
-            margin 0
-            padding 0
+    ul
+        margin 0
+        padding 0
 
-            li
-                float left
+        li
+            float left
 
-            a
-                color main-color
-                display block
-                font-weight bold
-                padding 0 2em
-                text-decoration none
-                transition background-color 0.2s ease-in-out
+        a
+            color main-black
+            display block
+            font-weight bold
+            padding 0 2em
+            text-decoration none
+            transition all 0.2s ease-in-out
 
-                &:hover
-                    background pastel-blue
-                    color white
+            &:hover
+                background main-blue
+                color white
+
 #main-area
     background white
-    border 1px solid #e0e0e0
+    border-left 1px solid main-black
+    border-right 1px solid main-black
     height 500px
 
     > *
@@ -75,7 +84,9 @@ header
         padding 0
 
 footer
-    background pastel-blue
+    background main-blue
+    border-left 1px solid main-black
+    border-right 1px solid main-black
     padding 1em
     text-align center
 
@@ -84,3 +95,8 @@ footer
 
 .right
     float right
+
+::selection
+    background main-blue
+    color white
+    text-shadow none

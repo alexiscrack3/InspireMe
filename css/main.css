@@ -1,15 +1,18 @@
 body{background:#f7f7f7;color:#444;font-family:Arial;font-size:16px;margin:0 auto;width:75%}
-header{background:#fff;height:4em;left:0;position:relative;top:0;}
-header > *{position:absolute;top:0}
-header #logo-area{height:100%;left:0;width:20%;}
-header #logo-area figure{background:#29abe2;border:1px dashed #000;border-radius:10px;height:3em;margin-left:10%;margin-top:-1.5em;position:absolute;top:50%;width:80%}
-header nav{height:100%;line-height:4em;right:0;width:80%;}
-header nav ul{float:right;margin:0;padding:0;}
-header nav ul li{float:left}
-header nav ul a{color:#444;display:block;font-weight:bold;padding:0 2em;text-decoration:none;transition:background-color .2s ease-in-out;}
-header nav ul a:hover{background:#29abe2;color:#fff}
-#main-area{background:#fff;border:1px solid #e0e0e0;height:500px;}
+header{height:4em;left:0;margin:.67em 0;position:relative;top:0;}
+header > div{height:4em}
+header #logo-area{line-height:4em;text-align:center;width:25%;}
+header #logo-area span{color:#29abe2;font-size:2em}
+header #ads-area{text-align:right;width:75%;}
+header #ads-area aside{background:#fff;border:1px dashed #444;border-radius:10px;box-sizing:border-box;display:inline-block;height:4em;width:80%}
+nav{background:#fafafa;height:4em;line-height:4em;right:0;width:100%;}
+nav ul{margin:0;padding:0;}
+nav ul li{float:left}
+nav ul a{color:#444;display:block;font-weight:bold;padding:0 2em;text-decoration:none;transition:all .2s ease-in-out;}
+nav ul a:hover{background:#29abe2;color:#fff}
+#main-area{background:#fff;border-left:1px solid #444;border-right:1px solid #444;height:500px;}
 #main-area > *{margin:0;padding:0}
-footer{background:#29abe2;padding:1em;text-align:center}
+footer{background:#29abe2;border-left:1px solid #444;border-right:1px solid #444;padding:1em;text-align:center}
 .left{float:left}
 .right{float:right}
+::selection{background:#29abe2;color:#fff;text-shadow:none}
