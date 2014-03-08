@@ -1,94 +1,111 @@
 header-height = 4em
 
-dark-gray    = #707070
-light-gray   = #FAFAFA
-light-gray2  = #DDDCDC
+dark-gray     = #707070
+light-gray    = #FAFAFA
+gray-shadow   = #CCC
+gray-border   = #E0E0E0
 
-main-black   = #444
-main-blue    = #29ABE2
+main-black    = #444
+main-blue     = #29ABE2
+
+custom-margin = 0.5em
 
 body
     background #F7F7F7
     color main-black
     font-family Arial
     font-size 16px
+
+#wrapper
+    background white
+    box-shadow 0 0 100px gray-shadow
+    height auto
     margin 0 auto
+    position relative
     width 75%
 
-header
-    height header-height
-    left 0
-    margin 0.67em 0
-    position relative
-    top 0
-
-    > div
+    header
         height header-height
+        left 0
+        padding 0.67em 0
+        position relative
+        top 0
 
-    #logo-area
-        line-height header-height
-        text-align center
-        width 25%
-
-        span
-            color main-blue
-            font-size 2em
-
-    #ads-area
-        text-align right /* This will only work if the child block is an inline-block */
-        width 75%
-
-        aside
-            background white
-            border 1px dashed main-black
-            border-radius 10px
-            box-sizing border-box
-            display inline-block
+        > div
             height header-height
-            width 80%
 
-nav
-    background light-gray
-    height header-height
-    line-height header-height
-    right 0
-    width 100%
+        #logo-area
+            line-height header-height
+            text-align left
+            width 25%
 
-    ul
-        margin 0
-        padding 0
+            h1
+                font-size 2em
+                margin 0 0 0 custom-margin
 
-        li
-            float left
+                a
+                    color main-blue
+                    text-decoration none
 
-        a
-            color main-black
-            display block
-            font-weight bold
-            padding 0 2em
-            text-decoration none
-            transition all 0.2s ease-in-out
+        #ads-area
+            text-align right /* This will only work if the child block is an inline-block */
+            width 75%
 
-            &:hover
-                background main-blue
-                color white
+            aside
+                background white
+                border 1px dashed main-black
+                border-radius 10px
+                box-sizing border-box
+                display inline-block
+                height header-height
+                margin-right custom-margin
+                width 80%
 
-#main-area
-    background white
-    border-left 1px solid main-black
-    border-right 1px solid main-black
-    height 500px
 
-    > *
-        margin 0
-        padding 0
+    nav
+        background light-gray
+        border-top 1px solid gray-border
+        border-bottom 1px solid gray-border
+        height header-height
+        line-height header-height
+        right 0
+        width 100%
 
-footer
-    background main-blue
-    border-left 1px solid main-black
-    border-right 1px solid main-black
-    padding 1em
-    text-align center
+        ul
+            margin 0
+            padding 0
+
+            li
+                float left
+
+            a
+                color main-black
+                display block
+                font-weight bold
+                padding 0 2em
+                text-decoration none
+                transition all 0.2s ease-in-out
+
+                &:hover
+                    background main-blue
+                    color white
+
+    #main-area
+        background white
+        min-height 600px
+        overflow hidden
+        padding custom-margin
+        position relative
+
+    footer
+        background main-blue
+        border-top 1px solid gray-border
+        padding 1em
+        position relative
+        text-align center
+
+        ::selection
+            background dark-gray
 
 .left
     float left
