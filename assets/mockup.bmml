@@ -1,0 +1,30 @@
+<mockup version="1.0" skin="sketch" measuredW="1188" measuredH="608" mockupW="800" mockupH="600">
+  <controls>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="388" y="8" w="800" h="600" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inspire%20Me%0Ahttp%3A//inspireme.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Title" x="524" y="101" w="-1" h="-1" measuredW="92" measuredH="28" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>InspireMe</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::MenuBar" x="514" y="146" w="548" h="43" measuredW="455" measuredH="29" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <text>Home%2C%20Quote%20of%20the%20Day%2C%20About%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Facebook%2C%20Twitter</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Canvas" x="514" y="507" w="549" h="78" measuredW="100" measuredH="70" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Canvas" x="513" y="183" w="549" h="351" measuredW="100" measuredH="70" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="696" y="534" w="184" h="21" measuredW="150" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Powered%20by%20alexiscrack3</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Canvas" x="703" y="93" w="332" h="36" measuredW="100" measuredH="70" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Canvas" x="514" y="77" w="549" h="76" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
+  </controls>
+</mockup>
