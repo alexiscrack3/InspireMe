@@ -2,20 +2,20 @@ header-height = 4em
 
 dark-gray     = #707070
 light-gray    = #FAFAFA
-gray-shadow   = #CCC
+light-gray2   = #F0F0F0
 gray-border   = #E0E0E0
 
 main-black    = #444
-main-blue     = #29ABE2
+ligth-blue    = #29ABE2
 
 custom-margin = 0.5em
 
 html
-    background #F7F7F7
+    background light-gray2
 
 body
     background white
-    box-shadow 0 0 100px gray-shadow
+    box-shadow 0 0 100px rgba(0,0,0,0.3)
     color main-black
     font-family Arial
     font-size 16px
@@ -44,7 +44,7 @@ body
                 margin 0 0 0 custom-margin
 
                 a
-                    color main-blue
+                    color ligth-blue
                     text-decoration none
 
         #ads-area
@@ -52,8 +52,8 @@ body
             width 75%
 
             aside
-                background white
-                border 1px dashed main-black
+                background ligth-blue
+                border 1px dashed dark-gray
                 border-radius 10px
                 box-sizing border-box
                 display inline-block
@@ -86,18 +86,44 @@ body
                 transition all 0.2s ease-in-out
 
                 &:hover
-                    background main-blue
+                    background ligth-blue
                     color white
 
-    #main-area
+    #articles
         background white
         min-height 600px
         overflow hidden
         padding custom-margin
         position relative
 
+        article
+            border-bottom 1px solid gray-border
+
+            blockquote
+                border-left 3px solid gray-border
+                padding-left 15px
+                text-align justify
+
+                &:before
+                    display block
+                    height 0
+                    content "“"
+                    margin-left -0.9em
+                    font italic 4em Arial
+                    color dark-gray
+
+                > *
+                    line-height 2em
+
+                cite
+                    display block
+                    line-height 2em
+
+                    &:before
+                        content "— "
+
     footer
-        background main-blue
+        background ligth-blue
         border-top 1px solid gray-border
         padding 1em
         position relative
@@ -113,6 +139,6 @@ body
     float right
 
 ::selection
-    background main-blue
+    background ligth-blue
     color white
     text-shadow none

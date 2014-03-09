@@ -1,18 +1,24 @@
-html{background:#f7f7f7}
-body{background:#fff;box-shadow:0 0 100px #ccc;color:#444;font-family:Arial;font-size:16px;height:auto;margin:0 auto;position:relative;width:75%;}
+html{background:#f0f0f0}
+body{background:#fff;box-shadow:0 0 100px rgba(0,0,0,0.3);color:#444;font-family:Arial;font-size:16px;height:auto;margin:0 auto;position:relative;width:75%;}
 body header{height:4em;left:0;padding:.67em 0;position:relative;top:0;}
 body header > div{height:4em}
 body header #logo-area{line-height:4em;text-align:left;width:25%;}
 body header #logo-area h1{font-size:2em;margin:0 0 0 .5em;}
 body header #logo-area h1 a{color:#29abe2;text-decoration:none}
 body header #ads-area{text-align:right;width:75%;}
-body header #ads-area aside{background:#fff;border:1px dashed #444;border-radius:10px;box-sizing:border-box;display:inline-block;height:4em;margin-right:.5em;width:80%}
+body header #ads-area aside{background:#29abe2;border:1px dashed #707070;border-radius:10px;box-sizing:border-box;display:inline-block;height:4em;margin-right:.5em;width:80%}
 body nav{background:#fafafa;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;height:4em;line-height:4em;right:0;width:100%;}
 body nav ul{margin:0;padding:0;}
 body nav ul li{float:left}
 body nav ul a{color:#444;display:block;font-weight:bold;padding:0 2em;text-decoration:none;transition:all .2s ease-in-out;}
 body nav ul a:hover{background:#29abe2;color:#fff}
-body #main-area{background:#fff;min-height:600px;overflow:hidden;padding:.5em;position:relative}
+body #articles{background:#fff;min-height:600px;overflow:hidden;padding:.5em;position:relative;}
+body #articles article{border-bottom:1px solid #e0e0e0;}
+body #articles article blockquote{border-left:3px solid #e0e0e0;padding-left:15px;text-align:justify;}
+body #articles article blockquote:before{display:block;height:0;content:"“";margin-left:-.9em;font:italic 4em Arial;color:#707070}
+body #articles article blockquote > *{line-height:2em}
+body #articles article blockquote cite{display:block;line-height:2em;}
+body #articles article blockquote cite:before{content:"— "}
 body footer{background:#29abe2;border-top:1px solid #e0e0e0;padding:1em;position:relative;text-align:center;}
 body footer ::selection{background:#707070}
 .left{float:left}
