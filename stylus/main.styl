@@ -1,4 +1,7 @@
-header-height = 4em
+@import "normalize.styl"
+
+header-height = 5em
+nav-height    = 4em
 
 dark-gray     = #707070
 light-gray    = #FAFAFA
@@ -27,25 +30,26 @@ body
     header
         height header-height
         left 0
-        padding 0.67em 0
         position relative
         top 0
 
         > div
             height header-height
+            line-height header-height
 
         #logo-area
-            line-height header-height
-            text-align left
+            text-align center
             width 25%
 
             h1
-                font-size 2em
-                margin 0 0 0 custom-margin
+                margin 0
 
                 a
                     color ligth-blue
                     text-decoration none
+
+                    &::first-letter
+                        color red
 
         #ads-area
             text-align right /* This will only work if the child block is an inline-block */
@@ -57,25 +61,30 @@ body
                 border-radius 10px
                 box-sizing border-box
                 display inline-block
-                height header-height
+                height nav-height
                 margin-right custom-margin
+                vertical-align: middle
                 width 80%
 
     nav
         background light-gray
-        border-top 1px solid gray-border
         border-bottom 1px solid gray-border
-        height header-height
-        line-height header-height
-        right 0
-        width 100%
+        border-top 1px solid gray-border
+        height nav-height
+        line-height nav-height
+        position relative
 
         ul
+            font-size 0
+            line-height nav-height
             margin 0
             padding 0
+            position absolute
 
             li
-                float left
+                display inline-block
+                font-size 1rem
+                line-height nav-height
 
             a
                 color main-black
@@ -85,9 +94,11 @@ body
                 text-decoration none
                 transition all 0.2s ease-in-out
 
-                &:hover
-                    background ligth-blue
-                    color white
+        #main-menu
+            left 0
+
+        #social-menu
+            right 0
 
     #articles
         background white
@@ -97,7 +108,6 @@ body
         position relative
 
         article
-            border-bottom 1px solid gray-border
 
             blockquote
                 border-left 3px solid gray-border
@@ -122,6 +132,9 @@ body
                     &:before
                         content "— "
 
+        article ~ article
+            border-top 1px solid gray-border
+
     footer
         background ligth-blue
         border-top 1px solid gray-border
@@ -142,3 +155,15 @@ body
     background ligth-blue
     color white
     text-shadow none
+
+@media screen and (max-width: 400px)
+    body
+        transition all 0.2s ease-in-out
+        width 100%
+
+    #logo-area
+        text-align center
+        width 100%
+
+    #ads-area
+        display none
