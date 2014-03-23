@@ -2,6 +2,7 @@
 
 header-height = 5em
 nav-height    = 4em
+logo-width    = 190px
 
 dark-gray     = #707070
 light-gray    = #FAFAFA
@@ -36,13 +37,15 @@ body
         > div
             height header-height
             line-height header-height
+            position absolute
+            top 0
 
         #logo-area
-            text-align center
-            width 25%
+            left 0
+            width logo-width
 
             h1
-                margin 0
+                margin 0 0 0 custom-margin
 
                 a
                     color ligth-blue
@@ -52,8 +55,10 @@ body
                         color red
 
         #ads-area
+            left 0
+            margin-left logo-width
+            right 0
             text-align right /* This will only work if the child block is an inline-block */
-            width 75%
 
             aside
                 background ligth-blue
@@ -62,9 +67,9 @@ body
                 box-sizing border-box
                 display inline-block
                 height nav-height
-                margin-right custom-margin
+                margin 0 custom-margin 0 0
                 vertical-align: middle
-                width 80%
+                width 90%
 
     nav
         background light-gray
@@ -93,6 +98,10 @@ body
                 padding 0 2em
                 text-decoration none
                 transition all 0.2s ease-in-out
+
+                &:hover
+                    background ligth-blue
+                    color white
 
         #main-menu
             left 0
@@ -156,14 +165,16 @@ body
     color white
     text-shadow none
 
-@media screen and (max-width: 400px)
+@media only screen and (max-width: 400px)
     body
         transition all 0.2s ease-in-out
         width 100%
 
-    #logo-area
-        text-align center
-        width 100%
+        header
 
-    #ads-area
-        display none
+            #logo-area
+                text-align center
+                width 100%
+
+            #ads-area
+                display none
