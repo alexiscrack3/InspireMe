@@ -1,21 +1,31 @@
 @import "normalize.styl"
+@import "fonts.styl"
 
-header-height = 5em
-nav-height    = 4em
-logo-width    = 190px
+header-height    = 5em
+nav-height       = 4em
+icon-menu-height = 3rem
+icon-menu-margin = 0.5rem
+logo-width       = 190px
 
-dark-gray     = #707070
-light-gray    = #FAFAFA
-light-gray2   = #F0F0F0
-gray-border   = #E0E0E0
+dark-gray        = #707070
+light-gray       = #FAFAFA
+light-gray2      = #F0F0F0
+gray-border      = #E0E0E0
 
-main-black    = #444
-ligth-blue    = #29ABE2
+main-black       = #444
+ligth-blue       = #29ABE2
 
-custom-margin = 0.5em
+custom-margin    = 0.5em
 
 html
     background light-gray2
+
+a
+    text-decoration none
+
+q:before
+q:after
+    content ""
 
 body
     background white
@@ -103,6 +113,17 @@ body
                     background ligth-blue
                     color white
 
+    #icon-menu
+        background ligth-blue
+        color white
+        display none
+        font-size 2em
+        height icon-menu-height
+        line-height icon-menu-height
+        margin icon-menu-margin 0 icon-menu-margin icon-menu-margin
+        text-align center
+        width icon-menu-height
+
         #main-menu
             left 0
 
@@ -154,6 +175,7 @@ body
         ::selection
             background dark-gray
 
+
 .left
     float left
 
@@ -165,7 +187,7 @@ body
     color white
     text-shadow none
 
-@media only screen and (max-width: 400px)
+@media only screen and (max-width: 500px)
     body
         transition all 0.2s ease-in-out
         width 100%
@@ -178,3 +200,18 @@ body
 
             #ads-area
                 display none
+
+        nav
+            #icon-menu
+                background blue
+                display block
+
+                &:hover
+                    background red
+
+                    + ul
+                        background red
+
+            #main-menu
+                display none
+
