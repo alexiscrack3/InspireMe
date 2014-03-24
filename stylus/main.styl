@@ -65,8 +65,7 @@ body
                         color red
 
         #ads-area
-            left 0
-            margin-left logo-width
+            left logo-width
             right 0
             text-align right /* This will only work if the child block is an inline-block */
 
@@ -114,13 +113,13 @@ body
                     color white
 
     #icon-menu
-        background ligth-blue
+        background main-black
         color white
         display none
         font-size 2em
         height icon-menu-height
         line-height icon-menu-height
-        margin icon-menu-margin 0 icon-menu-margin icon-menu-margin
+        margin icon-menu-margin
         text-align center
         width icon-menu-height
 
@@ -187,8 +186,9 @@ body
     color white
     text-shadow none
 
-@media only screen and (max-width: 500px)
+@media only screen and (max-width: 720px)
     body
+        box-shadow 0 0 0 black
         transition all 0.2s ease-in-out
         width 100%
 
@@ -203,14 +203,16 @@ body
 
         nav
             #icon-menu
-                background blue
                 display block
 
                 &:hover
-                    background red
+                    background ligth-blue
 
                     + ul
                         background red
+                        display inline-block
+                        left icon-menu-height + (icon-menu-margin * 2)
+                        top 0
 
             #main-menu
                 display none
