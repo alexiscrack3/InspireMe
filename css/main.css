@@ -253,21 +253,16 @@ body nav {
   background: #fafafa;
   border-bottom: 1px solid #e0e0e0;
   border-top: 1px solid #e0e0e0;
-  height: 4em;
-  line-height: 4em;
   position: relative;
 }
 body nav ul {
-  font-size: 0;
-  line-height: 4em;
   margin: 0;
   padding: 0;
-  position: absolute;
   width: 100%;
 }
 body nav ul li {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 4em;
 }
 body nav ul a {
@@ -281,9 +276,6 @@ body nav ul a {
 body nav ul a:hover {
   background: #29abe2;
   color: #fff;
-}
-body nav #main-menu {
-  left: 0;
 }
 body #articles {
   background: #fff;
@@ -321,6 +313,7 @@ body #articles article ~ article {
 body footer {
   background: #29abe2;
   border-top: 1px solid #e0e0e0;
+  overflow: hidden;
   padding: 1em;
   position: relative;
   text-align: center;

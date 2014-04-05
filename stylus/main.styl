@@ -1,21 +1,21 @@
 @import "normalize.styl"
 @import "fonts.styl"
 
-header-height    = 5em
-logo-height      = 2.5em
-logo-width       = 190px
-nav-height       = 4em
-arrow-width      = 2.5em
+header-height = 5em
+logo-height   = 2.5em
+logo-width    = 190px
+item-height   = 4em
+arrow-width   = 2.5em
 
-dark-gray        = #707070
-gray-nav         = #FAFAFA
-gray-body        = #F0F0F0
-gray-border      = #E0E0E0
+dark-gray     = #707070
+gray-nav      = #FAFAFA
+gray-body     = #F0F0F0
+gray-border   = #E0E0E0
 
-main-black       = #444
-main-blue        = #29ABE2
+main-black    = #444
+main-blue     = #29ABE2
 
-custom-margin    = 0.5rem
+custom-margin = 0.5rem
 
 html
     background gray-body
@@ -67,22 +67,19 @@ body
         background gray-nav
         border-bottom 1px solid gray-border
         border-top 1px solid gray-border
-        height nav-height
-        line-height nav-height
         position relative
 
         ul
-            font-size 0
-            line-height nav-height
+            // font-size 0
             margin 0
             padding 0
-            position absolute
             width 100%
 
             li
                 display inline-block
-                font-size 1rem
-                line-height nav-height
+                // font-size 1rem
+                font-size 1em
+                line-height item-height
 
             a
                 color main-black
@@ -95,9 +92,6 @@ body
                 &:hover
                     background main-blue
                     color white
-
-        #main-menu
-            left 0
 
     #articles
         background white
@@ -137,6 +131,7 @@ body
     footer
         background main-blue
         border-top 1px solid gray-border
+        overflow hidden
         padding 1em
         position relative
         text-align center
@@ -155,8 +150,8 @@ body
     background rgba(0,0,0,0.65)
     color white
     display none
-    height nav-height
-    line-height nav-height
+    height item-height
+    line-height item-height
     position absolute
     right 0
     text-align center
