@@ -180,8 +180,8 @@ th {
 }
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?cgphan");
-  src: url("../fonts/icomoon.eot?#iefixcgphan") format('embedded-opentype'), url("../fonts/icomoon.woff?cgphan") format('woff'), url("../fonts/icomoon.ttf?cgphan") format('truetype'), url("../fonts/icomoon.svg?cgphan#icomoon") format('svg');
+  src: url("../fonts/icomoon.eot?-2tp8pq");
+  src: url("../fonts/icomoon.eot?#iefix-2tp8pq") format('embedded-opentype'), url("../fonts/icomoon.woff?-2tp8pq") format('woff'), url("../fonts/icomoon.ttf?-2tp8pq") format('truetype'), url("../fonts/icomoon.svg?-2tp8pq#icomoon") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -197,7 +197,10 @@ th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-menu:before {
+.icon-arrow-left:before {
+  content: "\e601";
+}
+.icon-arrow-right:before {
   content: "\e600";
 }
 html {
@@ -218,51 +221,33 @@ body {
   font-size: 16px;
   height: auto;
   margin: 0 auto;
-  position: relative;
   width: 75%;
 }
 body header {
   height: 5em;
   left: 0;
+  overflow: hidden;
   position: relative;
   top: 0;
 }
-body header > div {
-  height: 5em;
-  line-height: 5em;
-  position: absolute;
-  top: 0;
-}
-body header #logo-area {
-  left: 0;
+body header #logo {
+  height: 2.5em;
+  line-height: 2.5em;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
   width: 190px;
 }
-body header #logo-area h1 {
-  margin: 0 0 0 0.5em;
-}
-body header #logo-area h1 a {
+body header #logo a {
   color: #29abe2;
-  text-decoration: none;
 }
-body header #logo-area h1 a::first-letter {
-  color: #f00;
-}
-body header #ads-area {
+body header #ads {
+  bottom: 0.5rem;
   left: 190px;
-  right: 0;
-  text-align: right;
-/* This will only work if the child block is an inline-block */
-}
-body header #ads-area aside {
-  background: #29abe2;
-  border: 1px dashed #707070;
-  border-radius: 10px;
-  box-sizing: border-box;
-  display: inline-block;
-  height: 4em;
-  margin: 0 0.5em 0 0;
-  vertical-align: middle;
-  width: 90%;
+  margin-left: 0.5rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
 }
 body nav {
   background: #fafafa;
@@ -278,6 +263,7 @@ body nav ul {
   margin: 0;
   padding: 0;
   position: absolute;
+  width: 100%;
 }
 body nav ul li {
   display: inline-block;
@@ -296,28 +282,14 @@ body nav ul a:hover {
   background: #29abe2;
   color: #fff;
 }
-body #icon-menu {
-  background: #444;
-  color: #fff;
-  display: none;
-  font-size: 2em;
-  height: 3rem;
-  line-height: 3rem;
-  margin: 0.5rem;
-  text-align: center;
-  width: 3rem;
-}
-body #icon-menu #main-menu {
+body nav #main-menu {
   left: 0;
-}
-body #icon-menu #social-menu {
-  right: 0;
 }
 body #articles {
   background: #fff;
   min-height: 600px;
   overflow: hidden;
-  padding: 0.5em;
+  padding: 0.5rem;
   position: relative;
 }
 body #articles article blockquote {
@@ -354,7 +326,28 @@ body footer {
   text-align: center;
 }
 body footer ::selection {
-  background: #707070;
+  background: #fff;
+  color: #444;
+}
+.blue-box {
+  background: #29abe2;
+  border: 2px dashed #000;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.extra-box {
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  display: none;
+  height: 4em;
+  line-height: 4em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+  width: 2.5em;
+  z-index: 1;
 }
 .left {
   float: left;
@@ -373,26 +366,17 @@ body footer ::selection {
     transition: all 0.2s ease-in-out;
     width: 100%;
   }
-  body header #logo-area {
-    text-align: center;
-    width: 100%;
+  body header #logo {
+    margin: 0 auto;
   }
-  body header #ads-area {
+  body header #ads {
     display: none;
-  }
-  body nav #icon-menu {
-    display: block;
-  }
-  body nav #icon-menu:hover {
-    background: #29abe2;
-  }
-  body nav #icon-menu:hover + ul {
-    background: #f00;
-    display: inline-block;
-    left: 4rem;
-    top: 0;
   }
   body nav #main-menu {
-    display: none;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .extra-box {
+    display: block;
   }
 }

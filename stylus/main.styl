@@ -2,23 +2,23 @@
 @import "fonts.styl"
 
 header-height    = 5em
-nav-height       = 4em
-icon-menu-height = 3rem
-icon-menu-margin = 0.5rem
+logo-height      = 2.5em
 logo-width       = 190px
+nav-height       = 4em
+arrow-width      = 2.5em
 
 dark-gray        = #707070
-light-gray       = #FAFAFA
-light-gray2      = #F0F0F0
+gray-nav         = #FAFAFA
+gray-body        = #F0F0F0
 gray-border      = #E0E0E0
 
 main-black       = #444
-ligth-blue       = #29ABE2
+main-blue        = #29ABE2
 
-custom-margin    = 0.5em
+custom-margin    = 0.5rem
 
 html
-    background light-gray2
+    background gray-body
 
 a
     text-decoration none
@@ -35,53 +35,36 @@ body
     font-size 16px
     height auto
     margin 0 auto
-    position relative
     width 75%
 
     header
         height header-height
         left 0
+        overflow hidden
         position relative
         top 0
 
-        > div
-            height header-height
-            line-height header-height
-            position absolute
-            top 0
+        #logo
+            height logo-height
+            line-height logo-height
+            margin 0
+            text-align center
+            overflow hidden
+            width 190px
 
-        #logo-area
-            left 0
-            width logo-width
+            a
+                color main-blue
 
-            h1
-                margin 0 0 0 custom-margin
-
-                a
-                    color ligth-blue
-                    text-decoration none
-
-                    &::first-letter
-                        color red
-
-        #ads-area
+        #ads
+            bottom custom-margin
             left logo-width
-            right 0
-            text-align right /* This will only work if the child block is an inline-block */
-
-            aside
-                background ligth-blue
-                border 1px dashed dark-gray
-                border-radius 10px
-                box-sizing border-box
-                display inline-block
-                height nav-height
-                margin 0 custom-margin 0 0
-                vertical-align: middle
-                width 90%
+            margin-left custom-margin
+            position absolute
+            right custom-margin
+            top custom-margin
 
     nav
-        background light-gray
+        background gray-nav
         border-bottom 1px solid gray-border
         border-top 1px solid gray-border
         height nav-height
@@ -94,6 +77,7 @@ body
             margin 0
             padding 0
             position absolute
+            width 100%
 
             li
                 display inline-block
@@ -109,25 +93,11 @@ body
                 transition all 0.2s ease-in-out
 
                 &:hover
-                    background ligth-blue
+                    background main-blue
                     color white
-
-    #icon-menu
-        background main-black
-        color white
-        display none
-        font-size 2em
-        height icon-menu-height
-        line-height icon-menu-height
-        margin icon-menu-margin
-        text-align center
-        width icon-menu-height
 
         #main-menu
             left 0
-
-        #social-menu
-            right 0
 
     #articles
         background white
@@ -165,15 +135,38 @@ body
             border-top 1px solid gray-border
 
     footer
-        background ligth-blue
+        background main-blue
         border-top 1px solid gray-border
         padding 1em
         position relative
         text-align center
 
         ::selection
-            background dark-gray
+            background white
+            color main-black
 
+.blue-box
+    background main-blue
+    border 2px dashed black
+    border-radius 10px
+    box-sizing border-box
+
+.extra-box
+    background rgba(0,0,0,0.65)
+    color white
+    display none
+    height nav-height
+    line-height nav-height
+    position absolute
+    right 0
+    text-align center
+    top 0
+    transition all 0.2s ease-in-out
+    width arrow-width
+    z-index 1
+
+    // &:hover
+    //     background rgba(0,0,0,0.75)
 
 .left
     float left
@@ -182,7 +175,7 @@ body
     float right
 
 ::selection
-    background ligth-blue
+    background main-blue
     color white
     text-shadow none
 
@@ -193,27 +186,17 @@ body
         width 100%
 
         header
+            #logo
+                margin 0 auto
 
-            #logo-area
-                text-align center
-                width 100%
-
-            #ads-area
+            #ads
                 display none
 
         nav
-            #icon-menu
-                display block
-
-                &:hover
-                    background ligth-blue
-
-                    + ul
-                        background red
-                        display inline-block
-                        left icon-menu-height + (icon-menu-margin * 2)
-                        top 0
-
             #main-menu
-                display none
+                overflow-x auto
+                white-space nowrap
+
+    .extra-box
+        display block
 
