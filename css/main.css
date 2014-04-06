@@ -209,10 +209,6 @@ html {
 a {
   text-decoration: none;
 }
-q:before,
-q:after {
-  content: "";
-}
 body {
   background: #fff;
   box-shadow: 0 0 100px rgba(0,0,0,0.3);
@@ -277,19 +273,20 @@ body nav ul a:hover {
   background: #29abe2;
   color: #fff;
 }
-body #articles {
+body #quotations {
   background: #fff;
   min-height: 600px;
   overflow: hidden;
   padding: 0.5rem;
   position: relative;
 }
-body #articles article blockquote {
+body #quotations article blockquote {
   border-left: 3px solid #e0e0e0;
+  line-height: 2em;
   padding-left: 15px;
   text-align: justify;
 }
-body #articles article blockquote:before {
+body #quotations article blockquote:before {
   display: block;
   height: 0;
   content: "“";
@@ -297,17 +294,19 @@ body #articles article blockquote:before {
   font: italic 4em Arial;
   color: #707070;
 }
-body #articles article blockquote > * {
-  line-height: 2em;
+body #quotations article blockquote footer {
+  background: transparent;
+  border-top: 0;
+  font-style: italic;
+  overflow: visible;
+  padding: 0;
+  position: static;
+  text-align: left;
 }
-body #articles article blockquote cite {
-  display: block;
-  line-height: 2em;
-}
-body #articles article blockquote cite:before {
+body #quotations article blockquote footer:before {
   content: "— ";
 }
-body #articles article ~ article {
+body #quotations article + article {
   border-top: 1px solid #e0e0e0;
 }
 body footer {
