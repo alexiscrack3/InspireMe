@@ -66,14 +66,14 @@ body
         position relative
 
         ul
-            // font-size 0
+            // font-size 0 // Another way to fix inline block of items
             margin 0
             padding 0
             width 100%
 
             li
                 display inline-block
-                // font-size 1rem
+                // font-size 1rem // Another way to fix inline block of items
                 font-size 1em
                 line-height item-height
 
@@ -97,6 +97,10 @@ body
         position relative
 
         article
+            float left
+            height auto
+            overflow hidden
+            width 50%
 
             blockquote
                 border-left 3px solid gray-border
@@ -124,7 +128,7 @@ body
                     &:before
                         content "— "
 
-        article + article
+        article:nth-child(n+3)
             border-top 1px solid gray-border
 
     footer
@@ -173,7 +177,7 @@ body
     color white
     text-shadow none
 
-@media only screen and (max-width: 720px)
+@media only screen and (max-width: 480px)
     body
         box-shadow 0 0 0 black
         transition all 0.2s ease-in-out
@@ -191,6 +195,22 @@ body
                 overflow-x auto
                 white-space nowrap
 
+        #quotations
+            article
+                float none
+                width 100%
+
+        article:nth-child(n+3)
+            border-top 0
+
+        article + article
+            border-top 1px solid gray-border
+
     .extra-box
         display block
+
+
+@media only screen and (min-width: 480px)
+    body
+        transition all 0.2s ease-in-out
 
