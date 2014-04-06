@@ -280,6 +280,12 @@ body #quotations {
   padding: 0.5rem;
   position: relative;
 }
+body #quotations article {
+  float: left;
+  height: auto;
+  overflow: hidden;
+  width: 50%;
+}
 body #quotations article blockquote {
   border-left: 3px solid #e0e0e0;
   line-height: 2em;
@@ -306,7 +312,7 @@ body #quotations article blockquote footer {
 body #quotations article blockquote footer:before {
   content: "— ";
 }
-body #quotations article + article {
+body #quotations article:nth-child(n+3) {
   border-top: 1px solid #e0e0e0;
 }
 body footer {
@@ -367,6 +373,16 @@ body footer ::selection {
   body nav #main-menu {
     overflow-x: auto;
     white-space: nowrap;
+  }
+  body #quotations article {
+    float: none;
+    width: 100%;
+  }
+  body article:nth-child(n+3) {
+    border-top: 0;
+  }
+  body article + article {
+    border-top: 1px solid #e0e0e0;
   }
   .extra-box {
     display: block;
