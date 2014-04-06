@@ -388,3 +388,8 @@ body footer ::selection {
     display: block;
   }
 }
+@media only screen and (min-width: 720px) {
+  body {
+    transition: all 0.2s ease-in-out;
+  }
+}
