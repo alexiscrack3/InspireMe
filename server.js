@@ -13,6 +13,17 @@ router.get('/', function(req, res) {
     res.sendfile('./public/index.html');
 });
 
+router.get('/favorite', function(req, res) {
+    console.log('Hola');
+    res.sendfile('./public/favorite.html');
+});
+
+router.get('/about', function(req, res) {
+    res.sendfile('./public/about.html');
+});
+
+app.use('/', router);
+
 var server = app.listen(3000, function() {
     console.log('Listening on port %d', server.address().port);
 });
