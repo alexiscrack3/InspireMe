@@ -1,0 +1,19 @@
+{
+  "name": "InspireMe",
+  "version": "0.0.1",
+  "description": "Personal web project",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.4.5",
+    "method-override": "^2.0.2",
+    "morgan": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:alexiscrack3/inspireme.git"
+  },
+  "author": "Alexis Ortega",
+  "license": ""
+}
