@@ -16,6 +16,7 @@ main-black    = #444
 main-blue     = #29ABE2
 
 custom-margin = 0.5rem
+image-size    = 400px
 
 html
     background gray-body
@@ -89,12 +90,15 @@ body
                     background main-blue
                     color white
 
+    section
+        overflow hidden
+        position relative
+
     #quotations
         background white
         min-height 600px
         overflow hidden
         padding custom-margin
-        position relative
 
         article
             float left
@@ -116,20 +120,68 @@ body
                     font italic 4em Arial
                     color dark-gray
 
-                footer // Overriding style of main footer
-                    background transparent
-                    border-top 0
-                    font-style italic
-                    overflow visible
-                    padding 0
-                    position static
-                    text-align left
-
-                    &:before
-                        content "— "
-
         article:nth-child(n+3)
             border-top 1px solid gray-border
+
+    #favorite-quotation
+        background white
+        min-height 600px
+        padding custom-margin
+
+        article
+            bottom 0
+            height 40%
+            left 0
+            margin auto
+            position absolute
+            right 0
+            top 0
+            width 60%
+            font-size 2em
+
+            blockquote
+                line-height 2em
+                text-align justify
+
+    blockquote
+        footer // Overriding style of main footer
+            background transparent
+            border-top 0
+            font-style italic
+            overflow visible
+            padding 0
+            position static
+            text-align left
+
+            &:before
+                content "— "
+
+    #about
+        padding custom-margin
+
+        #picture
+            background red
+            float left
+            margin 0 custom-margin custom-margin 0
+            width auto
+
+            img
+                vertical-align middle // Strange margin at bottom caused by the image behaving like a character of text, and is solved by using the vertical-align property.
+                width image-size
+                height image-size
+
+        #details
+            text-align justify
+
+            h2
+                margin-bottom custom-margin
+                text-decoration underline
+
+            h2:first-child
+                margin 0 0 custom-margin 0
+
+            p
+                margin 0
 
     footer
         background main-blue
@@ -152,11 +204,11 @@ body
 .extra-box
     background rgba(0,0,0,0.65)
     color white
+    cursor pointer
     display none
     height item-height
     line-height item-height
     position absolute
-    right 0
     text-align center
     top 0
     transition all 0.2s ease-in-out
@@ -165,6 +217,12 @@ body
 
     // &:hover
     //     background rgba(0,0,0,0.75)
+
+.left-box
+    left 0
+
+.right-box
+    right 0
 
 .left
     float left

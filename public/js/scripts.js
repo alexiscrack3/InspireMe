@@ -3,30 +3,31 @@ $(document).ready(function() {
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         return false;
     });
-    // $('.extra-box').click(function(event) {
-    //     $('nav ul').animate({
-    //         scrollLeft: 0 },
-    //         'slow', function() {
-    //     });
-    // });
 
-    var positionX = $('nav ul').position().left;
+    var menu    = $('nav ul');
+    var leftBox = $('.left-box');
+    var left    = 0;
 
-    // $('.extra-box').hover(function(e) {
-    //     positionX += 1;
-    //     $('nav ul').animate({
-    //         scrollLeft: positionX },
-    //         'slow', function() {
-    //             console.log(positionX);
-    //     });
-    // }, function(e) {
-    //     console.log('afuera');
-    // });
-
-    $('.extra-box').hover(function(e) {
-        console.log('adentro');
-        $('.extra-box').hover();
-    }, function(e) {
-        console.log('afuera');
+    $('.right-box').click(function(event) {
+        menu.animate({
+            scrollLeft: ++left },
+            'fast', function() {
+            if (left > 0) {
+                leftBox.css('display', 'block');
+            }
+        });
+    }).mouseup(function(event) {
     });
+
+    leftBox.click(function(event) {
+        menu.animate({
+            scrollLeft: --left },
+            'fast', function() {
+            if (left === 0) {
+                leftBox.css('display', 'none');
+            }
+        });
+    });
+
+    var positionX = menu.position().left;
 });

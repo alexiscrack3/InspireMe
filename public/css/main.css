@@ -276,12 +276,15 @@ body nav ul a:hover {
   background: #29abe2;
   color: #fff;
 }
+body section {
+  overflow: hidden;
+  position: relative;
+}
 body #quotations {
   background: #fff;
   min-height: 600px;
   overflow: hidden;
   padding: 0.5rem;
-  position: relative;
 }
 body #quotations article {
   float: left;
@@ -303,7 +306,30 @@ body #quotations article blockquote:before {
   font: italic 4em Arial;
   color: #707070;
 }
-body #quotations article blockquote footer {
+body #quotations article:nth-child(n+3) {
+  border-top: 1px solid #e0e0e0;
+}
+body #favorite-quotation {
+  background: #fff;
+  min-height: 600px;
+  padding: 0.5rem;
+}
+body #favorite-quotation article {
+  bottom: 0;
+  height: 40%;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%;
+  font-size: 2em;
+}
+body #favorite-quotation article blockquote {
+  line-height: 2em;
+  text-align: justify;
+}
+body blockquote footer {
   background: transparent;
   border-top: 0;
   font-style: italic;
@@ -312,11 +338,35 @@ body #quotations article blockquote footer {
   position: static;
   text-align: left;
 }
-body #quotations article blockquote footer:before {
+body blockquote footer:before {
   content: "— ";
 }
-body #quotations article:nth-child(n+3) {
-  border-top: 1px solid #e0e0e0;
+body #about {
+  padding: 0.5rem;
+}
+body #about #picture {
+  background: #f00;
+  float: left;
+  margin: 0 0.5rem 0.5rem 0;
+  width: auto;
+}
+body #about #picture img {
+  vertical-align: middle;
+  width: 400px;
+  height: 400px;
+}
+body #about #details {
+  text-align: justify;
+}
+body #about #details h2 {
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+}
+body #about #details h2:first-child {
+  margin: 0 0 0.5rem 0;
+}
+body #about #details p {
+  margin: 0;
 }
 body footer {
   background: #29abe2;
@@ -339,16 +389,22 @@ body footer ::selection {
 .extra-box {
   background: rgba(0,0,0,0.65);
   color: #fff;
+  cursor: pointer;
   display: none;
   height: 4em;
   line-height: 4em;
   position: absolute;
-  right: 0;
   text-align: center;
   top: 0;
   transition: all 0.2s ease-in-out;
   width: 2.5em;
   z-index: 1;
+}
+.left-box {
+  left: 0;
+}
+.right-box {
+  right: 0;
 }
 .left {
   float: left;
