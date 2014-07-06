@@ -14,7 +14,6 @@ router.get('/', function(req, res) {
 });
 
 router.get('/favorite', function(req, res) {
-    console.log('Hola');
     res.sendfile('./public/favorite.html');
 });
 
