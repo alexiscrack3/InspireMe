@@ -2,9 +2,9 @@
   "name": "InspireMe",
   "version": "1.0.0",
   "description": "My favorite quotes",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node bin/www"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

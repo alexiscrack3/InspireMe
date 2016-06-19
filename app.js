@@ -1,14 +1,15 @@
 var express = require('express');
-var morgan = require('morgan');
-var methodOverride = require('method-override');
-var router = express.Router();
+var morgan  = require('morgan');
+var config  = require('./config');
+
 var app = express();
 
+// Middlewares
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
-app.use(methodOverride());
 
 // Routes
+var router = express.Router();
 router.get('/', function(req, res) {
     res.sendfile('./public/index.html');
 });
@@ -23,6 +24,16 @@ router.get('/about', function(req, res) {
 
 app.use('/', router);
 
-var server = app.listen(3000, function() {
+app.use(function(req, res, next) {
+    res.status(404);
+    res.sendfile('./public/404.html');
+});
+
+app.use(function(err, req, res, next) {
+    console.log(err.stack);
+    res.status(500).sendfile('./public/500.html');
+});
+
+var server = app.listen(config.port, function() {
     console.log('Listening on port %d', server.address().port);
 });
