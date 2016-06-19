@@ -1,2 +1,1 @@
-Looking for inspiration throug quotations
-
+InspireMe
