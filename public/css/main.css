@@ -276,7 +276,7 @@ body nav ul a:hover {
   background: #29abe2;
   color: #fff;
 }
-body section {
+body main {
   overflow: hidden;
   position: relative;
 }
