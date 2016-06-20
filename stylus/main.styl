@@ -3,25 +3,25 @@
 @import "normalize.styl"
 @import "fonts.styl"
 
-header-height = 5em
-logo-height   = 2.5em
-logo-width    = 190px
-item-height   = 4em
-arrow-width   = 2.5em
+$header-height = 5em
+$logo-height   = 2.5em
+$logo-width    = 190px
+$item-height   = 4em
+$arrow-width   = 2.5em
 
-dark-gray     = #707070
-gray-nav      = #FAFAFA
-gray-body     = #F0F0F0
-gray-border   = #E0E0E0
+$dark-gray     = #707070
+$gray-nav      = #FAFAFA
+$gray-body     = #F0F0F0
+$gray-border   = #E0E0E0
 
-main-black    = #444
-main-blue     = #29ABE2
+$main-black    = #444
+$main-blue     = #29ABE2
 
-custom-margin = 0.5rem
-image-size    = 400px
+$custom-margin = 0.5rem
+$image-size    = 400px
 
 html
-    background gray-body
+    background $gray-body
 
 a
     text-decoration none
@@ -29,7 +29,7 @@ a
 body
     background white
     box-shadow 0 0 100px rgba(0,0,0,0.3)
-    color main-black
+    color $main-black
     font-family Arial
     font-size 16px
     height auto
@@ -37,35 +37,35 @@ body
     width 75%
 
     header
-        height header-height
+        height $header-height
         left 0
         overflow hidden
         position relative
         top 0
 
         #logo
-            height logo-height
-            line-height logo-height
+            height $logo-height
+            line-height $logo-height
             margin 0
             text-align center
             overflow hidden
             width 190px
 
             a
-                color main-blue
+                color $main-blue
 
         #ads
-            bottom custom-margin
-            left logo-width
-            margin-left custom-margin
+            bottom $custom-margin
+            left $logo-width
+            margin-left $custom-margin
             position absolute
-            right custom-margin
-            top custom-margin
+            right $custom-margin
+            top $custom-margin
 
     nav
-        background gray-nav
-        border-bottom 1px solid gray-border
-        border-top 1px solid gray-border
+        background $gray-nav
+        border-bottom 1px solid $gray-border
+        border-top 1px solid $gray-border
         position relative
 
         ul
@@ -78,10 +78,10 @@ body
                 display inline-block
                 // font-size 1rem // Another way to fix inline block of items
                 font-size 1em
-                line-height item-height
+                line-height $item-height
 
             a
-                color main-black
+                color $main-black
                 display block
                 font-weight bold
                 padding 0 2em
@@ -89,7 +89,7 @@ body
                 transition all 0.2s ease-in-out
 
                 &:hover
-                    background main-blue
+                    background $main-blue
                     color white
 
     section
@@ -100,7 +100,7 @@ body
         background white
         min-height 600px
         overflow hidden
-        padding custom-margin
+        padding $custom-margin
 
         article
             float left
@@ -109,7 +109,7 @@ body
             width 50%
 
             blockquote
-                border-left 3px solid gray-border
+                border-left 3px solid $gray-border
                 line-height 2em
                 padding-left 15px
                 text-align justify
@@ -120,15 +120,15 @@ body
                     content "“"
                     margin-left -0.9em
                     font italic 4em Arial
-                    color dark-gray
+                    color $dark-gray
 
         article:nth-child(n+3)
-            border-top 1px solid gray-border
+            border-top 1px solid $gray-border
 
     #favorite-quotation
         background white
         min-height 600px
-        padding custom-margin
+        padding $custom-margin
 
         article
             bottom 0
@@ -159,35 +159,35 @@ body
                 content "— "
 
     #about
-        padding custom-margin
+        padding $custom-margin
 
         #picture
             background red
             float left
-            margin 0 custom-margin custom-margin 0
+            margin 0 $custom-margin $custom-margin 0
             width auto
 
             img
                 vertical-align middle // Strange margin at bottom caused by the image behaving like a character of text, and is solved by using the vertical-align property.
-                width image-size
-                height image-size
+                width $image-size
+                height $image-size
 
         #details
             text-align justify
 
             h2
-                margin-bottom custom-margin
+                margin-bottom $custom-margin
                 text-decoration underline
 
             h2:first-child
-                margin 0 0 custom-margin 0
+                margin 0 0 $custom-margin 0
 
             p
                 margin 0
 
     footer
-        background main-blue
-        border-top 1px solid gray-border
+        background $main-blue
+        border-top 1px solid $gray-border
         overflow hidden
         padding 1em
         position relative
@@ -195,10 +195,10 @@ body
 
         ::selection
             background white
-            color main-black
+            color $main-black
 
 .blue-box
-    background main-blue
+    background $main-blue
     border 2px dashed black
     border-radius 10px
     box-sizing border-box
@@ -208,13 +208,13 @@ body
     color white
     cursor pointer
     display none
-    height item-height
-    line-height item-height
+    height $item-height
+    line-height $item-height
     position absolute
     text-align center
     top 0
     transition all 0.2s ease-in-out
-    width arrow-width
+    width $arrow-width
     z-index 1
 
     // &:hover
@@ -233,7 +233,7 @@ body
     float right
 
 ::selection
-    background main-blue
+    background $main-blue
     color white
     text-shadow none
 
@@ -264,7 +264,7 @@ body
             border-top 0
 
         article + article
-            border-top 1px solid gray-border
+            border-top 1px solid $gray-border
 
     .extra-box
         display block
@@ -273,4 +273,3 @@ body
 @media only screen and (min-width: 480px)
     body
         transition all 0.2s ease-in-out
-
