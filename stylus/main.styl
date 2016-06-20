@@ -9,10 +9,10 @@ $logo-width    = 190px
 $item-height   = 4em
 $arrow-width   = 2.5em
 
-$dark-gray     = #707070
-$gray-nav      = #FAFAFA
-$gray-body     = #F0F0F0
-$gray-border   = #E0E0E0
+$dim-gray = #707070
+$gray-88  = #E0E0E0
+$gray-94  = #F0F0F0
+$gray-98  = #FAFAFA
 
 $main-black    = #444
 $main-blue     = #29ABE2
@@ -21,7 +21,7 @@ $custom-margin = 0.5rem
 $image-size    = 400px
 
 html
-    background $gray-body
+    background $gray-94
 
 a
     text-decoration none
@@ -63,9 +63,9 @@ body
             top $custom-margin
 
     nav
-        background $gray-nav
-        border-bottom 1px solid $gray-border
-        border-top 1px solid $gray-border
+        background $gray-98
+        border-bottom 1px solid $gray-88
+        border-top 1px solid $gray-88
         position relative
 
         ul
@@ -109,7 +109,7 @@ body
             width 50%
 
             blockquote
-                border-left 3px solid $gray-border
+                border-left 3px solid $gray-88
                 line-height 2em
                 padding-left 15px
                 text-align justify
@@ -120,10 +120,10 @@ body
                     content "“"
                     margin-left -0.9em
                     font italic 4em Arial
-                    color $dark-gray
+                    color $dim-gray
 
         article:nth-child(n+3)
-            border-top 1px solid $gray-border
+            border-top 1px solid $gray-88
 
     #favorite-quotation
         background white
@@ -187,7 +187,7 @@ body
 
     footer
         background $main-blue
-        border-top 1px solid $gray-border
+        border-top 1px solid $gray-88
         overflow hidden
         padding 1em
         position relative
@@ -264,7 +264,7 @@ body
             border-top 0
 
         article + article
-            border-top 1px solid $gray-border
+            border-top 1px solid $gray-88
 
     .extra-box
         display block
