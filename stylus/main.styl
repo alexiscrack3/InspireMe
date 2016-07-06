@@ -1,4 +1,4 @@
-// stylus -w -m stylus/main.styl -o public/css/main.css
+// stylus stylus/main.styl -w -c -m -o public/css/main.css
 
 @import "normalize.styl"
 @import "fonts.styl"
@@ -28,7 +28,7 @@ a
     text-decoration none
 
 body
-    background white
+    background transparent
     box-shadow 0 0 100px rgba(0,0,0,0.3)
     color $charcoal
     font-family Arial
@@ -38,6 +38,7 @@ body
     width 75%
 
     header
+        background-color white
         height $header-height
         left 0
         overflow hidden
