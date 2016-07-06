@@ -34,6 +34,6 @@ app.use(function(err, req, res, next) {
     res.status(500).sendFile(__dirname + '/public/500.html');
 });
 
-var server = app.listen(config.port, function() {
+var server = app.listen(process.env.PORT || config.port, function() {
     console.log('Listening on port %d', server.address().port);
 });
