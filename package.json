@@ -1,5 +1,5 @@
 {
-  "name": "InspireMe",
+  "name": "inspire-me",
   "version": "1.0.0",
   "description": "My favorite quotes",
   "main": "app.js",
@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:alexiscrack3/inspireme.git"
+    "url": "git@bitbucket.org:alexiscrack3/inspire-me.git"
   },
-  "homepage": "https://bitbucket.org/alexiscrack3/inspireme#readme",
+  "homepage": "https://github.com/alexiscrack3/inspire-me#readme",
   "author": "Alexis Ortega",
   "license": "ISC",
   "dependencies": {
