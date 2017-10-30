@@ -1,0 +1,23 @@
+@import 'normalize';
+
+header, nav, footer {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    
+    article {
+        background: red;
+        flex-basis: 30%;
+    }
+}
+@media (max-width: 400px) {
+    .flex-grid {
+      display: block;
+    }
+  }

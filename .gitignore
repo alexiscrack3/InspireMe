@@ -36,3 +36,11 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# Created by https://www.gitignore.io/api/sass
+
+### Sass ###
+.sass-cache/
+*.css.map
+
+# End of https://www.gitignore.io/api/sass
