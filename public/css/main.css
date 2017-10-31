@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -369,21 +370,238 @@ template {
 [hidden] {
   display: none; }
 
-header, nav, footer {
-  display: none; }
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?-2tp8pq");
+  src: url("../fonts/icomoon.eot?#iefix-2tp8pq") format("embedded-opentype"), url("../fonts/icomoon.woff?-2tp8pq") format("woff"), url("../fonts/icomoon.ttf?-2tp8pq") format("truetype"), url("../fonts/icomoon.svg?-2tp8pq#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-main {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: stretch; }
-  main article {
-    background: red;
-    flex-basis: 30%; }
+.icon-arrow-left:before {
+  content: "\e601"; }
 
-@media (max-width: 400px) {
-  .flex-grid {
+.icon-arrow-right:before {
+  content: "\e600"; }
+
+html {
+  background: #F0F0F0; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background: transparent;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+  color: #444;
+  font-family: Arial;
+  font-size: 16px;
+  height: auto;
+  margin: 0 auto;
+  width: 75%; }
+  body header {
+    background-color: white;
+    height: 5em;
+    left: 0;
+    overflow: hidden;
+    position: relative;
+    top: 0; }
+    body header #logo {
+      height: 2.5em;
+      line-height: 2.5em;
+      margin: 0;
+      text-align: center;
+      overflow: hidden;
+      width: 190px; }
+      body header #logo a {
+        color: #29ABE2; }
+    body header #ads {
+      bottom: 0.5rem;
+      left: 190px;
+      margin-left: 0.5rem;
+      position: absolute;
+      right: 0.5rem;
+      top: 0.5rem; }
+  body nav {
+    background: #FAFAFA;
+    border-bottom: 1px solid #E0E0E0;
+    border-top: 1px solid #E0E0E0;
+    position: relative; }
+    body nav ul {
+      margin: 0;
+      padding: 0;
+      width: 100%; }
+      body nav ul li {
+        display: inline-block;
+        font-size: 1em;
+        line-height: 4em; }
+      body nav ul a {
+        color: #444;
+        display: block;
+        font-weight: bold;
+        padding: 0 2em;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out; }
+        body nav ul a:hover {
+          background: #29ABE2;
+          color: white; }
+  body main {
+    overflow: hidden;
+    position: relative; }
+  body #quotations {
+    background: white;
+    min-height: 600px;
+    overflow: hidden;
+    padding: 0.5rem; }
+    body #quotations article {
+      float: left;
+      height: auto;
+      overflow: hidden;
+      width: 50%; }
+      body #quotations article blockquote {
+        border-left: 3px solid #E0E0E0;
+        line-height: 2em;
+        padding-left: 15px;
+        text-align: justify; }
+        body #quotations article blockquote:before {
+          display: block;
+          height: 0;
+          content: "“";
+          margin-left: -0.9em;
+          font: italic 4em Arial;
+          color: #707070; }
+    body #quotations article:nth-child(n+3) {
+      border-top: 1px solid #E0E0E0; }
+  body #favorite-quotation {
+    background: white;
+    min-height: 600px;
+    padding: 0.5rem; }
+    body #favorite-quotation article {
+      bottom: 0;
+      height: 40%;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60%;
+      font-size: 2em; }
+      body #favorite-quotation article blockquote {
+        line-height: 2em;
+        text-align: justify; }
+  body blockquote footer {
+    background: transparent;
+    border-top: 0;
+    font-style: italic;
+    overflow: visible;
+    padding: 0;
+    position: static;
+    text-align: left; }
+    body blockquote footer:before {
+      content: "— "; }
+  body #about {
+    padding: 0.5rem; }
+    body #about #picture {
+      background: transparent;
+      float: left;
+      margin: 0 0.5rem 0.5rem 0;
+      width: auto; }
+      body #about #picture img {
+        vertical-align: middle;
+        width: 400px;
+        height: 400px; }
+    body #about #details {
+      text-align: justify; }
+      body #about #details h2 {
+        margin-bottom: 0.5rem;
+        text-decoration: underline; }
+      body #about #details h2:first-child {
+        margin: 0 0 0.5rem 0; }
+      body #about #details p {
+        margin: 0; }
+  body footer {
+    background: #29ABE2;
+    border-top: 1px solid #E0E0E0;
+    overflow: hidden;
+    padding: 1em;
+    position: relative;
+    text-align: center; }
+    body footer ::selection {
+      background: white;
+      color: #444; }
+
+.blue-box {
+  background: #29ABE2;
+  border: 2px dashed black;
+  border-radius: 10px;
+  box-sizing: border-box; }
+
+.extra-box {
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  cursor: pointer;
+  display: none;
+  height: 4em;
+  line-height: 4em;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: all 0.2s ease-in-out;
+  width: 2.5em;
+  z-index: 1; }
+  .extra-box:hover {
+    background: rgba(0, 0, 0, 0.75); }
+
+.left-box {
+  left: 0; }
+
+.right-box {
+  right: 0; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+::selection {
+  background: #29ABE2;
+  color: white;
+  text-shadow: none; }
+
+@media only screen and (max-width: 480px) {
+  body {
+    box-shadow: 0 0 0 black;
+    transition: all 0.2s ease-in-out;
+    width: 100%; }
+    body header #logo {
+      margin: 0 auto; }
+    body header #ads {
+      display: none; }
+    body nav #main-menu {
+      overflow-x: auto;
+      white-space: nowrap; }
+    body #quotations article {
+      float: none;
+      width: 100%; }
+    body article:nth-child(n+3) {
+      border-top: 0; }
+    body article + article {
+      border-top: 1px solid #E0E0E0; }
+
+  .extra-box {
     display: block; } }
+@media only screen and (min-width: 480px) {
+  body {
+    transition: all 0.2s ease-in-out; } }
 
 /*# sourceMappingURL=main.css.map */

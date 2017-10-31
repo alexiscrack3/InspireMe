@@ -1,23 +1,332 @@
 @import 'normalize';
+@import 'fonts';
+@import 'colors';
+@import 'variables';
 
-header, nav, footer {
+html {
+    background: $gray-94;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: transparent;
+    box-shadow: 0 0 100px rgba(0,0,0,0.3);
+    color: $charcoal;
+    font-family: Arial;
+    font-size: 16px;
+    height: auto;
+    margin: 0 auto;
+    width: 75%;
+
+    header {
+        background-color: white;
+        height: $header-height;
+        left: 0;
+        overflow: hidden;
+        position: relative;
+        top: 0;
+
+        #logo {
+            height: $logo-height;
+            line-height: $logo-height;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+            width: 190px;
+
+            a {
+                color: $summer-sky;
+            }
+        }
+
+        #ads {
+            bottom: $custom-margin;
+            left: $logo-width;
+            margin-left: $custom-margin;
+            position: absolute;
+            right: $custom-margin;
+            top: $custom-margin;
+        }
+    }
+
+    nav {
+        background: $gray-98;
+        border-bottom: 1px solid $gray-88;
+        border-top: 1px solid $gray-88;
+        position: relative;
+
+        ul {
+            // font-size: 0; // Another way to fix inline block of items
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            li {
+                display: inline-block;
+                // font-size: 1rem; // Another way to fix inline block of items
+                font-size: 1em;
+                line-height: $item-height
+            }
+
+            a {
+                color: $charcoal;
+                display: block;
+                font-weight: bold;
+                padding: 0 2em;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    background: $summer-sky;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    main {
+        overflow: hidden;
+        position: relative;
+    }
+
+    #quotations {
+        background: white;
+        min-height: 600px;
+        overflow: hidden;
+        padding: $custom-margin;
+
+        article {
+            float: left;
+            height: auto;
+            overflow: hidden;
+            width: 50%;
+
+            blockquote {
+                border-left: 3px solid $gray-88;
+                line-height: 2em;
+                padding-left: 15px;
+                text-align: justify;
+
+                &:before {
+                    display: block;
+                    height: 0;
+                    content: "“";
+                    margin-left: -0.9em;
+                    font: italic 4em Arial;
+                    color: $dim-gray;
+                }
+            }
+        }
+
+        article:nth-child(n+3) {
+            border-top: 1px solid $gray-88;
+        }
+    }
+
+    #favorite-quotation {
+        background: white;
+        min-height: 600px;
+        padding: $custom-margin;
+
+        article {
+            bottom: 0;
+            height: 40%;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 60%;
+            font-size: 2em;
+
+            blockquote {
+                line-height: 2em;
+                text-align: justify;
+            }
+        }
+    }
+
+    blockquote {
+        footer {// Overriding style of main footer
+            background: transparent;
+            border-top: 0;
+            font-style: italic;
+            overflow: visible;
+            padding: 0;
+            position: static;
+            text-align: left;
+
+            &:before {
+                content: "— ";
+            }
+        }
+    }
+
+    #about {
+        padding: $custom-margin;
+
+        #picture {
+            background: transparent;
+            float: left;
+            margin: 0 $custom-margin $custom-margin 0;
+            width: auto;
+
+            img {
+                vertical-align: middle; // Strange margin at bottom caused by the image behaving like a character of text, and is solved by using the vertical-align property.
+                width: $image-size;
+                height: $image-size;
+            }
+        }
+
+        #details {
+            text-align: justify;
+
+            h2 {
+                margin-bottom: $custom-margin;
+                text-decoration: underline;
+            }
+
+            h2:first-child {
+                margin: 0 0 $custom-margin 0;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    footer {
+        background: $summer-sky;
+        border-top: 1px solid $gray-88;
+        overflow: hidden;
+        padding: 1em;
+        position: relative;
+        text-align: center;
+
+        ::selection {
+            background: white;
+            color: $charcoal;
+        }
+    }
+}
+
+.blue-box {
+    background: $summer-sky;
+    border: 2px dashed black;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.extra-box {
+    background: rgba(0,0,0,0.65);
+    color: white;
+    cursor: pointer;
     display: none;
+    height: $item-height;
+    line-height: $item-height;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: all 0.2s ease-in-out;
+    width: $arrow-width;
+    z-index: 1;
+
+    &:hover {
+        background: rgba(0,0,0,0.75);
+    }
+}
+.left-box {
+    left: 0;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: stretch;
-    
-    article {
-        background: red;
-        flex-basis: 30%;
+.right-box {
+    right: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+::selection {
+    background: $summer-sky;
+    color: white;
+    text-shadow :none;
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        box-shadow: 0 0 0 black;
+        transition: all 0.2s ease-in-out;
+        width: 100%;
+
+        header {
+            #logo {
+                margin: 0 auto;
+            }
+
+            #ads {
+                display: none;
+            }
+        }
+
+        nav {
+            #main-menu {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+        #quotations {
+            article {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        article:nth-child(n+3) {
+            border-top: 0;
+        }
+
+        article + article {
+            border-top: 1px solid $gray-88;
+        }
+    }
+
+    .extra-box {
+        display: block;
     }
 }
-@media (max-width: 400px) {
-    .flex-grid {
-      display: block;
+
+
+@media only screen and (min-width: 480px) {
+    body {
+        transition: all 0.2s ease-in-out;
     }
-  }
+}
+
+// main {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: space-evenly;
+//     align-items: stretch;
+    
+//     article {
+//         background: red;
+//         flex-basis: 30%;
+//     }
+// }
+// @media screen and (min-width: 800px) {
+//   .column {
+//     flex: 1;
+//   }
+// }
