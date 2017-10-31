@@ -18,10 +18,6 @@ router.get('/favorite', function(req, res) {
     res.sendFile(__dirname + '/public/favorite.html');
 });
 
-router.get('/about', function(req, res) {
-    res.sendFile(__dirname + '/public/about.html');
-});
-
 app.use('/', router);
 
 app.use(function(req, res, next) {
