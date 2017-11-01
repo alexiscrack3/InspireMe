@@ -13,6 +13,10 @@ a {
     text-decoration: none;
 }
 
+figure {
+    margin: 0;
+}
+
 blockquote {
     line-height: 2em;
     text-align: center;
@@ -112,15 +116,16 @@ body {
         align-items: stretch;
 
         article {
-            float: left;
             height: 240px;
             overflow: hidden;
+            position: relative;
 
             figure {
-                margin: 0;
                 width: 50%;
                 height: 100%;
-                float: left;
+                position: absolute;
+                top: 0;
+                left: 0;
 
                 img {
                     height: 100%;
@@ -129,6 +134,12 @@ body {
             }
 
             blockquote {
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+
                 &:after {
                     content: "—";
                     display: block;
@@ -211,7 +222,7 @@ body {
     box-sizing: border-box;
 }
 
-.extra-box {
+.navigation-box {
     background: rgba(0,0,0,0.65);
     color: white;
     cursor: pointer;
@@ -229,6 +240,7 @@ body {
         background: rgba(0,0,0,0.75);
     }
 }
+
 .left-box {
     left: 0;
 }
@@ -268,7 +280,7 @@ body {
         }
 
         nav {
-            #main-menu {
+            ul {
                 overflow-x: auto;
                 white-space: nowrap;
             }
@@ -276,21 +288,30 @@ body {
 
         #quotations {
             article {
-                float: none;
-                width: 100%;
+                figure {
+                    width: 100%;
+                    height: 50%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                blockquote {
+                    width: 100%;
+                    height: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                }
             }
         }
-
-        article:nth-child(n+3) {
-            border-top: 0;
-        }
-
-        article + article {
-            border-top: 1px solid $alto;
-        }
+    }
+    
+    .quotation-sm {
+        flex-basis: 100%;
     }
 
-    .extra-box {
+    .navigation-box {
         display: block;
     }
 }
@@ -300,9 +321,3 @@ body {
         transition: all 0.2s ease-in-out;
     }
 }
-
-// @media screen and (min-width: 800px) {
-//   .column {
-//     flex: 1;
-//   }
-// }

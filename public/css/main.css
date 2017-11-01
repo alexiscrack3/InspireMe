@@ -399,6 +399,9 @@ html {
 a {
   text-decoration: none; }
 
+figure {
+  margin: 0; }
+
 blockquote {
   line-height: 2em;
   text-align: center;
@@ -472,24 +475,31 @@ body {
     justify-content: space-evenly;
     align-items: stretch; }
     body #quotations article {
-      float: left;
       height: 240px;
-      overflow: hidden; }
+      overflow: hidden;
+      position: relative; }
       body #quotations article figure {
-        margin: 0;
         width: 50%;
         height: 100%;
-        float: left; }
+        position: absolute;
+        top: 0;
+        left: 0; }
         body #quotations article figure img {
           height: 100%;
           float: right; }
-      body #quotations article blockquote:after {
-        content: "—";
-        display: block; }
-      body #quotations article blockquote h2 {
-        background: transparent;
-        font-style: italic;
-        text-align: center; }
+      body #quotations article blockquote {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0; }
+        body #quotations article blockquote:after {
+          content: "—";
+          display: block; }
+        body #quotations article blockquote h2 {
+          background: transparent;
+          font-style: italic;
+          text-align: center; }
   body blockquote footer {
     background: transparent;
     border-top: 0;
@@ -539,7 +549,7 @@ body {
   border-radius: 10px;
   box-sizing: border-box; }
 
-.extra-box {
+.navigation-box {
   background: rgba(0, 0, 0, 0.65);
   color: white;
   cursor: pointer;
@@ -552,7 +562,7 @@ body {
   transition: all 0.2s ease-in-out;
   width: 2.5em;
   z-index: 1; }
-  .extra-box:hover {
+  .navigation-box:hover {
     background: rgba(0, 0, 0, 0.75); }
 
 .left-box {
@@ -581,18 +591,26 @@ body {
       margin: 0 auto; }
     body header #ads {
       display: none; }
-    body nav #main-menu {
+    body nav ul {
       overflow-x: auto;
       white-space: nowrap; }
-    body #quotations article {
-      float: none;
-      width: 100%; }
-    body article:nth-child(n+3) {
-      border-top: 0; }
-    body article + article {
-      border-top: 1px solid #E0E0E0; }
+    body #quotations article figure {
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    body #quotations article blockquote {
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      top: 50%;
+      left: 0; }
 
-  .extra-box {
+  .quotation-sm {
+    flex-basis: 100%; }
+
+  .navigation-box {
     display: block; } }
 @media only screen and (min-width: 480px) {
   body {
